@@ -67,6 +67,7 @@ gem 'refinerycms-testing'
 gem 'refinerycms-acts-as-indexed', ['~> 2.0.1', '>= 1.0.0']
 gem 'refinerycms-wymeditor', ['~> 1.0', '>= 1.0.0']
 gem 'refinerycms-authentication-devise', '~> 1.0'
+
 gem 'refinerycms-multisite'
 #  gem 'refinerycms-blog', ['~> 3.0', '>= 3.0.0']
 #  gem 'refinerycms-inquiries', ['~> 3.0', '>= 3.0.0']
