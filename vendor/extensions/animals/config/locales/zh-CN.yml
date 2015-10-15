@@ -1,0 +1,33 @@
+zh-CN:
+  refinery:
+    plugins:
+      animals:
+        title: Animals
+    animals:
+      admin:
+        animals:
+          actions:
+            create_new: 建立新的 Animal
+            reorder: 对 Animals 重新排序
+            reorder_done: 对 Animals 的重新排序结束
+          records:
+            title: Animals
+            sorry_no_results: 对不起，未找到结果。 #Sorry! There are no results found.
+
+            # There are no Animals yet. Click "Add New Animal" to add your first animal.
+            no_items_yet: 目前没有 Animals . 点击 "Add New Animal" 创建一个animal.
+          animal:
+            view_live_html: 查看 animal 的最新内容.<br/><em>(新窗口中打开)</em>
+            edit: 编辑 animal
+            delete: 永久删除 animal
+      animals:
+        show:
+          other: 其他 Animals
+  activerecord:
+    attributes:
+      'refinery/animals/animal':
+        name: Name
+        breed: Breed
+        birthdate: Birthdate
+        photo: Photo
+        bio: Bio

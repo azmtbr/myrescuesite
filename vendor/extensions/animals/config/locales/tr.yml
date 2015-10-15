@@ -1,0 +1,31 @@
+tr:
+  refinery:
+    plugins:
+      animals:
+        title: Animals
+    animals:
+      admin:
+        animals:
+          actions:
+            create_new: Yeni Ekle Animal
+            reorder: Tekrar sirala Animals
+            reorder_done: Tekrar siralama tamamlandiAnimals
+          records:
+            title: Animals
+            sorry_no_results: Uzgunum! Herhangi bir sonuc bulunamadi.
+            no_items_yet: Herhangi bir Animals yok henuz.  Tikla "Yeni Ekle Animal" eklemek senin ilk animal.
+          animal:
+            view_live_html: Bunu canlu animal goruntule <br/><em>(yeni bir pencerede acar)</em>
+            edit: Bunu Duzenle animal
+            delete: Bunu Sil animal sonsuza dek
+      animals:
+        show:
+          other: Diger Animals
+  activerecord:
+    attributes:
+      'refinery/animals/animal':
+        name: Name
+        breed: Breed
+        birthdate: Birthdate
+        photo: Photo
+        bio: Bio

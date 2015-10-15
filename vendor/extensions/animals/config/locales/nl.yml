@@ -1,0 +1,31 @@
+nl:
+  refinery:
+    plugins:
+      animals:
+        title: Animals
+    animals:
+      admin:
+        animals:
+          actions:
+            create_new: Nieuwe Animal toevoegen
+            reorder: De volgorde van de Animals wijzigen
+            reorder_done: Klaar met het wijzingen van de van de Animal-volgorde
+          records:
+            title: Animals
+            sorry_no_results: Helaas! Er zijn geen resultaten gevonden.
+            no_items_yet: Er zijn nog geen Animals. Druk op 'Nieuwe Animal toevoegen' om de eerste toe te voegen.
+          animal:
+            view_live_html: Deze animal op de website bekijken <br/><em>(opent in een nieuw venster)</em>
+            edit: Bewerk deze animal
+            delete: Deze animal definitief verwijderen
+      animals:
+        show:
+          other: Andere Animals
+  activerecord:
+    attributes:
+      'refinery/animals/animal':
+        name: Name
+        breed: Breed
+        birthdate: Birthdate
+        photo: Photo
+        bio: Bio

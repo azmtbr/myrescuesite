@@ -1,0 +1,20 @@
+<ul>
+  <% if ::Refinery::Animals::Admin::AnimalsController.searchable? %>
+    <li>
+      <%= render '/refinery/admin/search', :url => refinery.animals_admin_animals_path %>
+    </li>
+  <% end %>
+  <li>
+    <%= action_label :add, refinery.new_animals_admin_animal_path, t('.create_new') %>
+  </li>
+<% if !searching? && ::Refinery::Animals::Admin::AnimalsController.sortable? && ::Refinery::Animals::Animal.many? %>
+  <li>
+    <%= action_label :reorder,
+                     refinery.animals_admin_animals_path,
+                     t('.reorder', what:  "Animals"), id: 'reorder_action'%>
+    <%= action_label :reorder_done,
+                     refinery.animals_admin_animals_path,
+                      t('.reorder_done', what: "Animals"), id: 'reorder_action_done', class: 'hidden'%>
+  </li>
+<% end %>
+</ul>

@@ -1,0 +1,31 @@
+cs:
+  refinery:
+    plugins:
+      animals:
+        title: Animals
+    animals:
+      admin:
+        animals:
+          actions:
+            create_new: Přidat Animal
+            reorder: Řadit Animals
+            reorder_done: Konec řazení Animals
+          records:
+            title: Animals
+            sorry_no_results: Litujeme, ale nebyly nalezny žádné výsledky.
+            no_items_yet: Zatím nebyly vytvořeny žádné Animals. Zvolte "Přidat Animal" pro přidání prvního animal.
+          animal:
+            view_live_html: Zobrazit náhled animal<br/><em>(otevře se v novém okně)</em>
+            edit: Upravit animal
+            delete: Smazat animal
+      animals:
+        show:
+          other: Další Animals
+  activerecord:
+    attributes:
+      'refinery/animals/animal':
+        name: Name
+        breed: Breed
+        birthdate: Birthdate
+        photo: Photo
+        bio: Bio

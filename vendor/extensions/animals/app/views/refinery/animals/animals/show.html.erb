@@ -1,0 +1,51 @@
+<% content_for :body_content_title do %>
+  <%= @animal.name %>
+<% end %>
+
+<% content_for :body do %>
+  <section>
+    <h1>Name</h1>
+    <p>
+      <%=raw @animal.name %>
+    </p>
+  </section>
+  <section>
+    <h1>Breed</h1>
+    <p>
+      <%=raw @animal.breed %>
+    </p>
+  </section>
+  <section>
+    <h1>Birthdate</h1>
+    <p>
+      <%=raw @animal.birthdate.strftime("%B %d, %Y") %>
+    </p>
+  </section>
+  <section>
+    <h1>Photo</h1>
+    <p>
+      <%= image_fu @animal.photo, nil %>
+    </p>
+  </section>
+  <section>
+    <h1>Bio</h1>
+    <p>
+      <%=raw @animal.bio %>
+    </p>
+  </section>
+<% end %>
+
+<% content_for :side_body do %>
+  <aside>
+    <h2><%= t('.other') %></h2>
+    <ul id="animals">
+      <% @animals.each do |animal| %>
+        <li>
+          <%= link_to animal.name, refinery.animals_animal_path(animal) %>
+        </li>
+      <% end %>
+    </ul>
+  </aside>
+<% end %>
+
+<%= render '/refinery/content_page' %>

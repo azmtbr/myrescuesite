@@ -1,0 +1,31 @@
+it:
+  refinery:
+    plugins:
+      animals:
+        title: Animals
+    animals:
+      admin:
+        animals:
+          actions:
+            create_new: Aggiungi Nuovo Animal
+            reorder: Riordina Animals
+            reorder_done: Termina il Riordino di Animals
+          records:
+            title: Animals
+            sorry_no_results: "Spiacenti! Nessun risultato trovato"
+            no_items_yet: Non ci sono ancora Animals. Clicca "Aggiungi Nuovo Animal" per aggiungere il tuo primo animal.
+          animal:
+            view_live_html: Guarda live questo animal <br/><em>(apre una nuova finestra)</em>
+            edit: Modifica questo animal
+            delete: Rimuovi per sempre questo animal
+      animals:
+        show:
+          other: Altri Animals
+  activerecord:
+    attributes:
+      'refinery/animals/animal':
+        name: Name
+        breed: Breed
+        birthdate: Birthdate
+        photo: Photo
+        bio: Bio

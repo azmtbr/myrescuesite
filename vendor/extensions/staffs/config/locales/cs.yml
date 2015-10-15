@@ -1,0 +1,29 @@
+cs:
+  refinery:
+    plugins:
+      staffs:
+        title: Staffs
+    staffs:
+      admin:
+        staffs:
+          actions:
+            create_new: Přidat Staff
+            reorder: Řadit Staffs
+            reorder_done: Konec řazení Staffs
+          records:
+            title: Staffs
+            sorry_no_results: Litujeme, ale nebyly nalezny žádné výsledky.
+            no_items_yet: Zatím nebyly vytvořeny žádné Staffs. Zvolte "Přidat Staff" pro přidání prvního staff.
+          staff:
+            view_live_html: Zobrazit náhled staff<br/><em>(otevře se v novém okně)</em>
+            edit: Upravit staff
+            delete: Smazat staff
+      staffs:
+        show:
+          other: Další Staffs
+  activerecord:
+    attributes:
+      'refinery/staffs/staff':
+        name: Name
+        title: Title
+        bio: Bio
