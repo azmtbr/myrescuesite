@@ -49,6 +49,8 @@ group :production do
   gem 'rails_12factor'
 end
 
+  gem 'taps'
+
 
 # Refinery CMS
 gem 'refinerycms', github: 'refinery/refinerycms', branch: 'master'
