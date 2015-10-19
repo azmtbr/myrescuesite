@@ -47,6 +47,10 @@ group :development do
   gem 'spring'
 end
 
+group :production do
+  gem 'pg'
+end
+
 
 # Refinery CMS
 gem 'refinerycms', github: 'refinery/refinerycms', branch: 'master'
