@@ -51,7 +51,7 @@ end
 # Refinery CMS
 gem 'refinerycms', github: 'refinery/refinerycms', branch: 'master'
 
-gem 'refinerycms-testing'
+ gem 'refinerycms-testing'
 #
 # gem 'actionpack'
 #
@@ -68,11 +68,13 @@ gem 'refinerycms-acts-as-indexed', ['~> 2.0.1', '>= 1.0.0']
 gem 'refinerycms-wymeditor', ['~> 1.0', '>= 1.0.0']
 gem 'refinerycms-authentication-devise', '~> 1.0'
 
-gem 'refinerycms-multisite'
-#  gem 'refinerycms-blog', ['~> 3.0', '>= 3.0.0']
-#  gem 'refinerycms-inquiries', ['~> 3.0', '>= 3.0.0']
-#  gem 'refinerycms-search', ['~> 3.0', '>= 3.0.0']
-#  gem 'refinerycms-page-images', ['~> 3.0', '>= 3.0.0']
+# gem 'refinerycms-multisite'
+# gem 'refinerycms-base', '~> 1.0.11'
+# gem 'refinerycms-pages'
+# gem 'refinerycms-blog', ['~> 3.0', '>= 3.0.0']
+# gem 'refinerycms-inquiries', ['~> 3.0', '>= 3.0.0']
+# gem 'refinerycms-search', ['~> 3.0', '>= 3.0.0']
+# gem 'refinerycms-page-images', ['~> 3.0', '>= 3.0.0']
 
 gem 'refinerycms-animals', path: 'vendor/extensions'
 gem 'refinerycms-events', path: 'vendor/extensions'
