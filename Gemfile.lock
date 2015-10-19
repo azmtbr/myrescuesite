@@ -1,6 +1,6 @@
 GIT
   remote: git://github.com/refinery/refinerycms.git
-  revision: 39768eb0534a094652aba68f9519e7aa9d50d4fc
+  revision: 23fe09cc1a5e490e18bdf77173b7be63ed45e0f5
   branch: master
   specs:
     refinerycms (3.0.0)
