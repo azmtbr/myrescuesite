@@ -1,7 +1,9 @@
-<section id='records'>
-  <%= render 'records' %>
-</section>
-<aside id='actions'>
-  <%= render 'actions' %>
-</aside>
-<%= render '/refinery/admin/make_sortable', options: {tree: false} if !searching? and ::Refinery::Animals::Admin::AnimalsController.sortable? and ::Refinery::Animals::Animal.many? %>
+<div class="jumbotron">
+  <section id='records'>
+    <%= render 'records' %>
+  </section>
+  <aside id='actions'>
+    <%= render 'actions' %>
+  </aside>
+  <%= render '/refinery/admin/make_sortable', options: {tree: false} if !searching? and ::Refinery::Animals::Admin::AnimalsController.sortable? and ::Refinery::Animals::Animal.many? %>
+</div>

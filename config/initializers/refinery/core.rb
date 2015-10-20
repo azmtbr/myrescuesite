@@ -53,7 +53,7 @@ Refinery::Core.configure do |config|
 
   # Specify a different Refinery::Core::Engine mount path than the default of "/".
   # Make sure you clear the `tmp/cache` directory after changing this setting.
-   config.mounted_path = "pages#home"
+  # config.mounted_path = "pages#home"
 
   # Specify the order Refinery plugins appear in the admin view.
   # Plugins in the list are placed, as ordered, before any plugins not in the list.

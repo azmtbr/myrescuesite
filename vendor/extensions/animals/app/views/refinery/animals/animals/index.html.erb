@@ -1,12 +1,19 @@
-<% content_for :body do %>
-  <ul id="animals">
-    <% @animals.each do |animal| %>
-      <div>
-        <%= link_to (image_fu animal.photo, '104x104'), animal.photo.url %>
-        <%= link_to animal.name, refinery.animals_animal_path(animal) %>
+<div class="jumbotron">
+  <% content_for :body do %>
+    <ul id="animals">
+      <div class="container">
+          <% @animals.each do |animal| %>
+              <div class="animal_index_info">
+                  <div class="img-thumbnail">
+                    <%= link_to (image_fu animal.photo, '104x104'), animal.photo.url %>
+                  </div>
+                    </br>
+                    <%= link_to animal.name, refinery.animals_animal_path(animal) %>
+              </div>
       </div>
     <% end %>
   </ul>
 <% end %>
 
-<%= render '/refinery/content_page' %>
+  <%= render '/refinery/content_page' %>
+</div>
