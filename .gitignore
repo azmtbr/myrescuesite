@@ -133,3 +133,4 @@ bower.json
 # Ignore pow environment settings
 .powenv
 >>>>>>> c29378fb62a0d69d5002b55858aec82d7cb9c074
+.env

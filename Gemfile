@@ -54,6 +54,8 @@ end
 
   gem 'taps'
 
+  gem 'puma'
+
 
 # Refinery CMS
 gem 'refinerycms', github: 'refinery/refinerycms', branch: 'master'
