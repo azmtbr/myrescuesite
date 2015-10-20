@@ -1,9 +1,10 @@
 <% content_for :body do %>
   <ul id="staffs">
     <% @staffs.each do |staff| %>
-      <li>
+      <div>
+        <%= link_to (image_fu staff.photo, '104x104'), staff.photo.url %>
         <%= link_to staff.name, refinery.staffs_staff_path(staff) %>
-      </li>
+      </div>
     <% end %>
   </ul>
 <% end %>
