@@ -1,6 +1,6 @@
 GIT
   remote: git://github.com/refinery/refinerycms.git
-  revision: 23fe09cc1a5e490e18bdf77173b7be63ed45e0f5
+  revision: 3af4b957998bfd2afd099bbd8ea083b226031a9d
   branch: master
   specs:
     refinerycms (3.0.0)
@@ -172,7 +172,7 @@ GEM
       nokogiri (>= 1.5.9)
     mail (2.6.3)
       mime-types (>= 1.16, < 3)
-    mime-types (2.6.2)
+    mime-types (1.25.1)
     mini_portile (0.6.2)
     minitest (5.8.1)
     multi_json (1.11.2)
@@ -234,8 +234,8 @@ GEM
       refinerycms-core (~> 3.0, >= 3.0.0)
     responders (2.1.0)
       railties (>= 4.2.0, < 5)
-    rest-client (1.6.7)
-      mime-types (>= 1.16)
+    rest-client (1.6.9)
+      mime-types (~> 1.16)
     routing-filter (0.5.1)
       actionpack (~> 4.2)
       activesupport (~> 4.2)
