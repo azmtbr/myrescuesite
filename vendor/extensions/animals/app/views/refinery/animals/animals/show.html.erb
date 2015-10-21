@@ -1,8 +1,12 @@
-<% content_for :body_content_title do %>
-  <%= @animal.name %>
-<% end %>
+<div class="row">
+  <div class="col-md-4">
+    <% content_for :body_content_title do %>
+      <%= social_share_button_tag %>
+    <% end %>
+  </div>
+</div>
 
-<div class="media">
+<div class="media col-md-8">
   <% content_for :body do %>
     <section>
       <h1>Name</h1>
@@ -37,17 +41,21 @@
   <% end %>
 </div>
 
-<% content_for :side_body do %>
-  <aside>
-    <h2><%= t('.other') %></h2>
-    <ul id="animals">
-      <% @animals.each do |animal| %>
-        <li>
-          <%= link_to animal.name, refinery.animals_animal_path(animal) %>
-        </li>
-      <% end %>
-    </ul>
-  </aside>
-<% end %>
+<div id="other_animals" class="row">
+  <div class="media col-md-4">
+    <% content_for :side_body do %>
+      <aside>
+        <h2><%= t('.other') %></h2>
+        <ul id="animals">
+          <% @animals.each do |animal| %>
+            <li>
+              <%= link_to animal.name, refinery.animals_animal_path(animal) %>
+            </li>
+          <% end %>
+        </ul>
+      </aside>
+    <% end %>
+  </div>
+</div>
 
 <%= render '/refinery/content_page' %>

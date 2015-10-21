@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20151019202840) do
+ActiveRecord::Schema.define(version: 20151021000527) do
 
   create_table "refinery_animals", force: :cascade do |t|
     t.string   "name"
@@ -157,6 +157,7 @@ ActiveRecord::Schema.define(version: 20151019202840) do
     t.string   "layout_template"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.boolean  "show_in_footer",      default: false
   end
 
   add_index "refinery_pages", ["depth"], name: "index_refinery_pages_on_depth"

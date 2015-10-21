@@ -5,7 +5,7 @@
           <% @animals.each do |animal| %>
               <div class="animal_index_info">
                   <div class="img-thumbnail">
-                    <%= link_to (image_fu animal.photo, '104x104'), animal.photo.url %>
+                    <%= link_to (image_fu animal.photo, '104x104'), refinery.animals_animal_path(animal) %>
                   </div>
                     </br>
                     <%= link_to animal.name, refinery.animals_animal_path(animal) %>

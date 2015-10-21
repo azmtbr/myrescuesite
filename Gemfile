@@ -56,6 +56,8 @@ end
 
   gem 'puma'
 
+  gem 'social-share-button'
+
 
 # Refinery CMS
 gem 'refinerycms', github: 'refinery/refinerycms', branch: 'master'
