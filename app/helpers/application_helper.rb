@@ -10,7 +10,7 @@ module ApplicationHelper
     end
 
     # output = menu_items.inspect
-    output
+    # output
   end
 
   def navigation_menu
