@@ -55,7 +55,7 @@ end
 
   gem 'taps'
 
-
+  gem 'formtastic'
 
   gem 'social-share-button'
 
@@ -64,6 +64,10 @@ end
 gem 'refinerycms', github: 'refinery/refinerycms', branch: 'master'
 
  gem 'refinerycms-testing'
+
+# gem 'refinerycms-forms'
+
+
 #
 # gem 'actionpack'
 #
@@ -86,7 +90,7 @@ gem 'refinerycms-authentication-devise', '~> 1.0'
 # gem 'refinerycms-blog', ['~> 3.0', '>= 3.0.0']
 # gem 'refinerycms-inquiries', ['~> 3.0', '>= 3.0.0']
 # gem 'refinerycms-search', ['~> 3.0', '>= 3.0.0']
-# gem 'refinerycms-page-images', ['~> 3.0', '>= 3.0.0']
+# gem 'refinerycms-page-images'
 
 gem 'refinerycms-animals', path: 'vendor/extensions'
 gem 'refinerycms-events', path: 'vendor/extensions'

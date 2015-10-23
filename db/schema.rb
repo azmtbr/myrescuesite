@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20151021000527) do
+ActiveRecord::Schema.define(version: 20151022232349) do
 
   create_table "refinery_animals", force: :cascade do |t|
     t.string   "name"
@@ -166,6 +166,18 @@ ActiveRecord::Schema.define(version: 20151021000527) do
   add_index "refinery_pages", ["parent_id"], name: "index_refinery_pages_on_parent_id"
   add_index "refinery_pages", ["rgt"], name: "index_refinery_pages_on_rgt"
 
+  create_table "refinery_request_appointments", force: :cascade do |t|
+    t.string   "name"
+    t.string   "email"
+    t.integer  "phone"
+    t.string   "location"
+    t.text     "message"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  add_index "refinery_request_appointments", ["id"], name: "index_refinery_request_appointments_on_id"
+
   create_table "refinery_resource_translations", force: :cascade do |t|
     t.integer  "refinery_resource_id", null: false
     t.string   "locale",               null: false
@@ -186,6 +198,21 @@ ActiveRecord::Schema.define(version: 20151021000527) do
     t.datetime "created_at"
     t.datetime "updated_at"
   end
+
+  create_table "refinery_settings", force: :cascade do |t|
+    t.string   "name"
+    t.text     "value"
+    t.boolean  "destroyable",     default: true
+    t.string   "scoping"
+    t.boolean  "restricted",      default: false
+    t.string   "form_value_type"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+    t.string   "slug"
+    t.string   "title"
+  end
+
+  add_index "refinery_settings", ["name"], name: "index_refinery_settings_on_name"
 
 # Could not dump table "refinery_staffs" because of following NoMethodError
 #   undefined method `[]' for nil:NilClass
