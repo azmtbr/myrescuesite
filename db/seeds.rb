@@ -18,4 +18,5 @@ Refinery::Events::Engine.load_seed
 # Added by Refinery CMS Staffs extension
 Refinery::Staffs::Engine.load_seed
 
-Refinery::RequestAppointments::Engine.load_seed
+# Added by Refinery CMS Search engine
+Refinery::Search::Engine.load_seed

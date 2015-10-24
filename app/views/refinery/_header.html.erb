@@ -1,7 +1,13 @@
 
 <h1><%= Refinery::Core.site_name %></h1>
-<div class="navbar navbar-default navbar-static-top">
-     <div class="container">
+
+<div class="form-group" id="site_search">
+  <%= form_tag refinery.search_root_path, method: 'get' do %>
+    <%= label_tag 'query', ('Search Site') %>
+    <%= text_field_tag :query, {}, {type: "search", placeholder: ("For what?"), value: (params[:query] if params[:query])} %>
+    <%= submit_tag ("go") %>
+  <% end %>
+</div>
+    <div class="container">
        <div><%= navigation_menu.to_html %></div>
     </div>
-</div>

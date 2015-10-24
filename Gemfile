@@ -75,7 +75,7 @@ gem 'refinerycms', github: 'refinery/refinerycms', branch: 'master'
 #
 # gem 'railties'
 #
-# gem 'refinerycms-core', '~> 3.0.0'
+gem 'refinerycms-core'
 #
 # gem 'activemodel'
 
@@ -91,6 +91,7 @@ gem 'refinerycms-authentication-devise', '~> 1.0'
 # gem 'refinerycms-inquiries', ['~> 3.0', '>= 3.0.0']
 # gem 'refinerycms-search', ['~> 3.0', '>= 3.0.0']
 # gem 'refinerycms-page-images'
+gem 'refinerycms-search', github: 'refinery/refinerycms-search', branch: 'master'
 
 gem 'refinerycms-animals', path: 'vendor/extensions'
 gem 'refinerycms-events', path: 'vendor/extensions'

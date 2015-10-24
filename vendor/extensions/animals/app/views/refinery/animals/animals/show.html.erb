@@ -1,48 +1,44 @@
-<div class="row">
-  <div class="col-md-4">
-    <% content_for :body_content_title do %>
-      <%= social_share_button_tag %>
-    <% end %>
-  </div>
-</div>
 
-<div class="media col-md-8">
-  <% content_for :body do %>
-    <section>
-      <h1>Name</h1>
-      <p>
-        <%=raw @animal.name %>
-      </p>
+    <section id="body_content">
+      <section id="body">
+        <div id="animal">
+        <section>
+          <h2>Name</h2>
+          <p>
+            <%=raw @animal.name %>
+          </p>
+        </section>
+        <div class="social">
+          <%= social_share_button_tag %>
+        </div>
+        <div class="animal_photo">
+        <%= image_fu @animal.photo %>
+        </div>
+        <section>
+          <h2>Breed</h2>
+          <p>
+            <%=raw @animal.breed %>
+          </p>
+        </section>
+        <section>
+          <h2>Birthdate</h2>
+          <p>
+            <%=raw @animal.birthdate.strftime("%B %d, %Y") %>
+          </p>
+        </section>
+        <section>
+          <h2>Bio</h2>
+          <p>
+            <%=raw @animal.bio %>
+          </p>
+        </section>
+        </div>
+      </section>
     </section>
-    <section>
-      <h1>Breed</h1>
-      <p>
-        <%=raw @animal.breed %>
-      </p>
-    </section>
-    <section>
-      <h1>Birthdate</h1>
-      <p>
-        <%=raw @animal.birthdate.strftime("%B %d, %Y") %>
-      </p>
-    </section>
-    <section class="animal_photo">
-      <h1>Photo</h1>
-      <p>
-        <%= image_fu @animal.photo, nil %>
-      </p>
-    </section>
-    <section>
-      <h1>Bio</h1>
-      <p>
-        <%=raw @animal.bio %>
-      </p>
-    </section>
-  <% end %>
-</div>
 
-<div id="other_animals" class="row">
-  <div class="media col-md-4">
+
+
+
     <% content_for :side_body do %>
       <aside>
         <h2><%= t('.other') %></h2>
@@ -55,7 +51,8 @@
         </ul>
       </aside>
     <% end %>
-  </div>
-</div>
+
+
+
 
 <%= render '/refinery/content_page' %>

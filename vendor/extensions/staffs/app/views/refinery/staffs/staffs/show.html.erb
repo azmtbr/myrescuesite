@@ -1,45 +1,48 @@
-<% content_for :body_content_title do %>
-  <%= @staff.name %>
-<% end %>
+<div class="row">
+  <div class="media">
+    <section id="body_content">
+      <section id="body">
+        <div id="animal">
+          <section>
+            <h2>Name</h2>
+            <p>
+              <%=raw @staff.name %>
+            </p>
+          </section>
+          <section>
+            <h2>Title</h2>
+            <p>
+              <%=raw @staff.title %>
+            </p>
+          </section>
+          <div class="animal_photo">
+          <%= image_fu @staff.photo %>
+          </div>
+          <section>
+            <h2>Bio</h2>
+            <p>
+              <%=raw @staff.bio %>
+            </p>
+          </section>
+        </div>
+      </section>
+    </section>
 
-<% content_for :body do %>
-  <section>
-    <h1>Name</h1>
-    <p>
-      <%=raw @staff.name %>
-    </p>
-  </section>
-  <section>
-    <h1>Title</h1>
-    <p>
-      <%=raw @staff.title %>
-    </p>
-  </section>
-  <section>
-    <h1>Photo</h1>
-    <p>
-      <%= image_fu @staff.photo, nil %>
-    </p>
-  </section>
-  <section>
-    <h1>Bio</h1>
-    <p>
-      <%=raw @staff.bio %>
-    </p>
-  </section>
-<% end %>
 
-<% content_for :side_body do %>
-  <aside>
-    <h2><%= t('.other') %></h2>
-    <ul id="staffs">
-      <% @staffs.each do |staff| %>
-        <li>
-          <%= link_to staff.name, refinery.staffs_staff_path(staff) %>
-        </li>
-      <% end %>
-    </ul>
-  </aside>
-<% end %>
+    <% content_for :side_body do %>
+      <aside>
+        <h2><%= t('.other') %></h2>
+        <ul id="staffs">
+          <% @staffs.each do |staff| %>
+            <li>
+              <%= link_to staff.name, refinery.staffs_staff_path(staff) %>
+            </li>
+          <% end %>
+        </ul>
+      </aside>
+    <% end %>
 
-<%= render '/refinery/content_page' %>
+
+      <%= render '/refinery/content_page' %>
+    </div>
+  </div>

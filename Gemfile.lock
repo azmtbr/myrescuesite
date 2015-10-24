@@ -1,4 +1,13 @@
 GIT
+  remote: git://github.com/refinery/refinerycms-search.git
+  revision: aa8098cd0c159b72174daa1e8195dd797773d948
+  branch: master
+  specs:
+    refinerycms-search (3.0.0)
+      refinerycms-acts-as-indexed (~> 2.0.1)
+      refinerycms-core (~> 3.0.0)
+
+GIT
   remote: git://github.com/refinery/refinerycms.git
   revision: 3af4b957998bfd2afd099bbd8ea083b226031a9d
   branch: master
@@ -333,7 +342,9 @@ DEPENDENCIES
   refinerycms-acts-as-indexed (~> 2.0.1, >= 1.0.0)
   refinerycms-animals!
   refinerycms-authentication-devise (~> 1.0)
+  refinerycms-core
   refinerycms-events!
+  refinerycms-search!
   refinerycms-staffs!
   refinerycms-testing
   refinerycms-wymeditor (~> 1.0, >= 1.0.0)
