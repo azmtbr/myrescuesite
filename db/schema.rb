@@ -36,6 +36,7 @@ ActiveRecord::Schema.define(version: 20151024042120) do
   add_index "refinery_authentication_devise_roles_users", ["role_id", "user_id"], name: "refinery_roles_users_role_id_user_id"
   add_index "refinery_authentication_devise_roles_users", ["user_id", "role_id"], name: "refinery_roles_users_user_id_role_id"
 
+
   create_table "refinery_authentication_devise_user_plugins", force: :cascade do |t|
     t.integer "user_id"
     t.string  "name"
