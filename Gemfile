@@ -76,6 +76,8 @@ gem 'refinerycms', github: 'refinery/refinerycms', branch: 'master'
 # gem 'railties'
 #
 gem 'refinerycms-core'
+
+gem 'refinerycms-settings'
 #
 # gem 'activemodel'
 
