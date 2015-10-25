@@ -1,0 +1,8 @@
+
+<form class="form-search">
+  <%= form_tag refinery.search_root_path, method: 'get' do %>
+  <%= label_tag 'query', "Search" %>
+  <%= text_field_tag :query, {}, {type: "search", placeholder: "for", value: (params[:query] if params[:query])} %>
+  <%= submit_tag "Find it" %>
+<% end %>
+</form>

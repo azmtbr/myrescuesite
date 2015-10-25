@@ -1,4 +1,12 @@
-
+<% content_for :stylesheets do %>
+  <% if @page.background_image.present? %>
+  <style type="text/css">
+    body {
+      background-image: url(<%= @page.background_image.url -%>);
+    }
+  </style>
+  <% end %>
+<% end %>
 
 <div class="jumbotron">
   <section id="body_content">

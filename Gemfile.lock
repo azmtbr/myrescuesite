@@ -55,6 +55,25 @@ GIT
       refinerycms-core (= 3.0.0)
       rspec-rails (~> 3.0)
 
+GIT
+  remote: https://github.com/refinery/refinerycms-inquiries
+  revision: 192b4a91f4a0a5c7a8b60431f757aa8cfa8230ed
+  branch: master
+  specs:
+    refinerycms-inquiries (3.0.0)
+      filters_spam (~> 0.2)
+      refinerycms-core (~> 3.0.0)
+      refinerycms-settings (~> 3.0.0)
+
+GIT
+  remote: https://github.com/refinery/refinerycms-settings
+  revision: 10c12da53e0c6a793497c43f6cdd2f17a97e9632
+  branch: master
+  specs:
+    refinerycms-settings (3.0.0)
+      friendly_id (~> 5.0, >= 5.0.1)
+      refinerycms-core (~> 3.0, >= 3.0.0)
+
 PATH
   remote: vendor/extensions
   specs:
@@ -159,6 +178,7 @@ GEM
     factory_girl_rails (4.4.1)
       factory_girl (~> 4.4.0)
       railties (>= 3.0.0)
+    filters_spam (0.5)
     formtastic (3.1.3)
       actionpack (>= 3.2.13)
     friendly_id (5.1.0)
@@ -241,9 +261,6 @@ GEM
     refinerycms-i18n (3.0.1)
       rails-i18n (~> 4.0.1)
       routing-filter (>= 0.4.0)
-    refinerycms-settings (3.0.0)
-      friendly_id (~> 5.0, >= 5.0.1)
-      refinerycms-core (~> 3.0, >= 3.0.0)
     refinerycms-wymeditor (1.0.6)
       refinerycms-core (~> 3.0, >= 3.0.0)
     responders (2.1.0)
@@ -347,8 +364,9 @@ DEPENDENCIES
   refinerycms-authentication-devise (~> 1.0)
   refinerycms-core
   refinerycms-events!
+  refinerycms-inquiries!
   refinerycms-search!
-  refinerycms-settings
+  refinerycms-settings!
   refinerycms-staffs!
   refinerycms-testing
   refinerycms-wymeditor (~> 1.0, >= 1.0.0)

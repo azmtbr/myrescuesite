@@ -47,13 +47,18 @@ a {
   display: none;
 }
 
-#site_search {
-  position: absolute;
-  right: 100px;
-  top: 60px;
-}
+// #site_search {
+//   position: absolute;
+//   right: 100px;
+//   top: 60px;
+// }
 
 header {
+  .form-search {
+      position: absolute;
+      right: 100px;
+      top: 60px;
+  }
   background-color: #852A2C;
   background: -webkit-gradient(linear, left top, left bottom, from(#555), to(#222));
   background: -moz-linear-gradient(top,  #555, #222);
@@ -91,7 +96,7 @@ header {
   padding: 20px 100px;
   font-weight: normal;
   font-style: italic;
-  color: #FFF;
+  color: #373737;
   background: -webkit-gradient(linear, left top, left bottom, from(#A03133), to(#722324));
   background: -moz-linear-gradient(top,  #A03133, #722324);
   -moz-box-shadow: 0 2px 8px 2px #000;

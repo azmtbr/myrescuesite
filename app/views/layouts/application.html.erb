@@ -13,6 +13,15 @@
       <div class="container">
         <section id="page" class="jumbotron">
           <%= yield %>
+          <% content_for :stylesheets do %>
+            <% if @page.background_image.present? %>
+            <style type="text/css">
+              body {
+                background-image: url(<%= @page.background_image.url -%>);
+              }
+            </style>
+            <% end %>
+            <% end %>
         </section>
       </div>
       <footer id="footer">

@@ -5,3 +5,14 @@
   </span>
   <%= f.check_box :show_in_footer %> Show this page in the footer menu
 </div>
+
+<div class="field">
+<%= f.label :background_image %>
+<%= render :partial => "/refinery/admin/image_picker", :locals => {
+  :f => f,
+  :field => :background_image_id,
+  :image => f.object.background_image,
+  :toggle_image_display => true
+}
+%>
+</div>

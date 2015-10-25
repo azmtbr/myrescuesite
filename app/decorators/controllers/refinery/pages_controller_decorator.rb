@@ -6,6 +6,13 @@ Refinery::Admin::PagesController.send :prepend,(
   end
 )
 
+Refinery::Admin::PagesController.class_eval do
+  def page_params_with_my_params
+    page_params_without_my_params.merge(params.require(:page).permit(:background_image_id))
+  end
+  alias_method_chain :page_params, :my_params
+end
+
 # module Refinery
 #   module Admin
 #     class PagesController < Refinery::AdminController

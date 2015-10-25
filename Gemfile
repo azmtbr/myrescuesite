@@ -77,7 +77,7 @@ gem 'refinerycms', github: 'refinery/refinerycms', branch: 'master'
 #
 gem 'refinerycms-core'
 
-gem 'refinerycms-settings'
+gem 'refinerycms-settings', git: "https://github.com/refinery/refinerycms-settings", branch: "master"
 #
 # gem 'activemodel'
 
@@ -85,12 +85,13 @@ gem 'refinerycms-settings'
 gem 'refinerycms-acts-as-indexed', ['~> 2.0.1', '>= 1.0.0']
 gem 'refinerycms-wymeditor', ['~> 1.0', '>= 1.0.0']
 gem 'refinerycms-authentication-devise', '~> 1.0'
+# gem 'refinerycms-calendar', '~> 2.0.0'
 
 # gem 'refinerycms-multisite'
 # gem 'refinerycms-base', '~> 1.0.11'
 # gem 'refinerycms-pages'
 # gem 'refinerycms-blog', ['~> 3.0', '>= 3.0.0']
-# gem 'refinerycms-inquiries', ['~> 3.0', '>= 3.0.0']
+gem "refinerycms-inquiries", git: "https://github.com/refinery/refinerycms-inquiries", branch: "master"
 # gem 'refinerycms-search', ['~> 3.0', '>= 3.0.0']
 # gem 'refinerycms-page-images'
 gem 'refinerycms-search', github: 'refinery/refinerycms-search', branch: 'master'

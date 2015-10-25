@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20151024042120) do
+ActiveRecord::Schema.define(version: 20151025022304) do
 
   create_table "refinery_animals", force: :cascade do |t|
     t.string   "name"
@@ -35,7 +35,6 @@ ActiveRecord::Schema.define(version: 20151024042120) do
 
   add_index "refinery_authentication_devise_roles_users", ["role_id", "user_id"], name: "refinery_roles_users_role_id_user_id"
   add_index "refinery_authentication_devise_roles_users", ["user_id", "role_id"], name: "refinery_roles_users_user_id_role_id"
-
 
   create_table "refinery_authentication_devise_user_plugins", force: :cascade do |t|
     t.integer "user_id"
@@ -102,6 +101,18 @@ ActiveRecord::Schema.define(version: 20151024042120) do
     t.string   "image_alt"
   end
 
+  create_table "refinery_inquiries_inquiries", force: :cascade do |t|
+    t.string   "name"
+    t.string   "email"
+    t.string   "phone"
+    t.text     "message"
+    t.boolean  "spam",       default: false
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  add_index "refinery_inquiries_inquiries", ["id"], name: "index_refinery_inquiries_inquiries_on_id"
+
   create_table "refinery_page_part_translations", force: :cascade do |t|
     t.integer  "refinery_page_part_id", null: false
     t.string   "locale",                null: false
@@ -159,6 +170,7 @@ ActiveRecord::Schema.define(version: 20151024042120) do
     t.datetime "created_at"
     t.datetime "updated_at"
     t.boolean  "show_in_footer",      default: false
+    t.integer  "background_image_id"
   end
 
   add_index "refinery_pages", ["depth"], name: "index_refinery_pages_on_depth"
