@@ -302,9 +302,8 @@ GEM
     sequel (3.20.0)
     sinatra (1.0)
       rack (>= 1.0)
-    social-share-button (0.1.8)
-      coffee-rails
-      sass-rails
+    social-buttons (0.3.9)
+      rails (>= 3.0.0)
     speakingurl-rails (1.1.5)
       railties (>= 3.1)
     spring (1.4.0)
@@ -372,7 +371,7 @@ DEPENDENCIES
   refinerycms-wymeditor (~> 1.0, >= 1.0.0)
   sass-rails (~> 5.0)
   sdoc (~> 0.4.0)
-  social-share-button
+  social-buttons
   spring
   sqlite3
   taps

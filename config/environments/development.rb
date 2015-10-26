@@ -15,7 +15,7 @@ Rails.application.configure do
 
   # Don't care if the mailer can't send.
   if config.respond_to?(:action_mailer)
-    config.action_mailer.raise_delivery_errors = false
+    config.action_mailer.raise_delivery_errors = true
   end
 
   # Print deprecation notices to the Rails logger.
@@ -29,7 +29,7 @@ Rails.application.configure do
   # number of complex assets.
   config.assets.debug = true
 
-  # Asset digests allow you to set far-future HTTP expiration dates on all assets,
+  # Asset digests allow you to set far-future TTP expiration dates on all assets,
   # yet still be able to expire them through the digest params.
   config.assets.digest = true
 
@@ -40,4 +40,9 @@ Rails.application.configure do
 
   # Raises error for missing translations
   # config.action_view.raise_on_missing_translations = true
+
+  config.action_mailer.default_url_options = { host: 'localhost', port: 3000 }
+  config.action_mailer.perform_deliveries = true
+  config.mailer_sender = 'info@myrescuesite.com'
+  config.log_level = :debug
 end

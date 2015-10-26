@@ -58,7 +58,9 @@ end
 
   gem 'formtastic'
 
-  gem 'social-share-button'
+  gem "social-buttons"
+
+# gem 'social-share-button', git: 'https://github.com/huacnlee/social-share-button', branch: 'master'
 
 
 # Refinery CMS

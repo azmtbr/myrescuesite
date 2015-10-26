@@ -134,3 +134,4 @@ bower.json
 .env
 
 Procfile
+application.yml

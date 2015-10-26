@@ -6,6 +6,8 @@
 <%= csrf_meta_tags if Refinery::Core.authenticity_token_on_frontend -%>
 <%= yield :meta %>
 
+<%= javascript_include_tag "https://apis.google.com/js/plusone.js" %>
+
 <%= stylesheet_link_tag "application" %>
 <%= yield :stylesheets %>
 
