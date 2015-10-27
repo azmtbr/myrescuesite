@@ -58,7 +58,7 @@ end
 
   gem 'formtastic'
 
-  gem "social-buttons"
+  # gem "social-buttons"
 
 # gem 'social-share-button', git: 'https://github.com/huacnlee/social-share-button', branch: 'master'
 
@@ -90,6 +90,7 @@ gem 'refinerycms-acts-as-indexed', ['~> 2.0.1', '>= 1.0.0']
 gem 'refinerycms-wymeditor', ['~> 1.0', '>= 1.0.0']
 gem 'refinerycms-authentication-devise', '~> 1.0'
 # gem 'refinerycms-calendar', '~> 2.0.0'
+gem 'refinerycms-portfolio', github: 'refinery/refinerycms-portfolio', branch: 'master'
 
 # gem 'refinerycms-multisite'
 # gem 'refinerycms-base', '~> 1.0.11'

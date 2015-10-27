@@ -15,7 +15,7 @@
 
   <div class='field'>
     <%= f.label :birthdate -%>
-    <%= f.datetime_select :birthdate -%>
+    <%= f.date_select :birthdate, { :start_year => 1920 }, :class => 'form-control date-select datetest' %>
   </div>
 
   <div class='field'>
