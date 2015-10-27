@@ -70,20 +70,10 @@ gem 'refinerycms', github: 'refinery/refinerycms', branch: 'master'
 
 # gem 'refinerycms-forms'
 
-
-
-#
-# gem 'actionpack'
-#
-# gem 'activerecord'
-#
-# gem 'railties'
-#
 gem 'refinerycms-core'
 
 gem 'refinerycms-settings', git: "https://github.com/refinery/refinerycms-settings", branch: "master"
-#
-# gem 'activemodel'
+
 
 # Optionally, specify additional Refinery CMS Extensions here:
 gem 'refinerycms-acts-as-indexed', ['~> 2.0.1', '>= 1.0.0']
@@ -95,9 +85,9 @@ gem 'refinerycms-portfolio', github: 'refinery/refinerycms-portfolio', branch: '
 # gem 'refinerycms-multisite'
 # gem 'refinerycms-base', '~> 1.0.11'
 # gem 'refinerycms-pages'
-# gem 'refinerycms-blog', ['~> 3.0', '>= 3.0.0']
 gem "refinerycms-inquiries", git: "https://github.com/refinery/refinerycms-inquiries", branch: "master"
 # gem 'refinerycms-search', ['~> 3.0', '>= 3.0.0']
+gem 'refinerycms-blog', git: 'https://github.com/refinery/refinerycms-blog', branch: 'master'
 # gem 'refinerycms-page-images'
 gem 'refinerycms-search', github: 'refinery/refinerycms-search', branch: 'master'
 

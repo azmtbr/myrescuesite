@@ -68,6 +68,22 @@ GIT
       rspec-rails (~> 3.0)
 
 GIT
+  remote: https://github.com/refinery/refinerycms-blog
+  revision: 5ee833618c3f365b50742df2b6ca4f591b52a467
+  branch: master
+  specs:
+    refinerycms-blog (3.0.0)
+      acts-as-taggable-on
+      filters_spam (~> 0.2)
+      friendly_id (~> 5.1.0)
+      globalize (>= 4.0.0, < 5.2)
+      jquery-ui-rails (~> 5.0.0)
+      rails_autolink (~> 1.1.3)
+      refinerycms-core (~> 3.0.0)
+      refinerycms-settings (~> 3.0.0)
+      seo_meta (~> 2.0.0.rc.1)
+
+GIT
   remote: https://github.com/refinery/refinerycms-inquiries
   revision: 192b4a91f4a0a5c7a8b60431f757aa8cfa8230ed
   branch: master
@@ -137,6 +153,8 @@ GEM
       minitest (~> 5.1)
       thread_safe (~> 0.3, >= 0.3.4)
       tzinfo (~> 1.1)
+    acts-as-taggable-on (3.5.0)
+      activerecord (>= 3.2, < 5)
     acts_as_indexed (0.8.3)
     addressable (2.3.8)
     arel (6.0.3)
@@ -254,6 +272,8 @@ GEM
     rails_12factor (0.0.3)
       rails_serve_static_assets
       rails_stdout_logging
+    rails_autolink (1.1.6)
+      rails (> 3.1)
     rails_serve_static_assets (0.0.4)
     rails_stdout_logging (0.0.4)
     railties (4.2.4)
@@ -373,6 +393,7 @@ DEPENDENCIES
   refinerycms-acts-as-indexed (~> 2.0.1, >= 1.0.0)
   refinerycms-animals!
   refinerycms-authentication-devise (~> 1.0)
+  refinerycms-blog!
   refinerycms-core
   refinerycms-events!
   refinerycms-inquiries!
