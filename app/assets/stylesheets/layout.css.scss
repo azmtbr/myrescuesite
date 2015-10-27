@@ -47,11 +47,14 @@ a {
   display: none;
 }
 
-// #site_search {
-//   position: absolute;
-//   right: 100px;
-//   top: 60px;
-// }
+
+
+.submit {
+  color: #373737;
+}
+#query {
+  color: #000;
+}
 
 header {
   .form-search {
@@ -175,4 +178,8 @@ footer {
   }
   p { margin: 10px 0; }
   .more_info { font-size: 18px; }
+}
+
+#query {
+  color: #000;
 }

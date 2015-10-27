@@ -12,4 +12,5 @@ Refinery::Portfolio.configure do |config|
   # config.display_gallery_text = true
 
   # config.page_url = "/portfolio"
+
 end
