@@ -86,9 +86,8 @@ gem 'refinerycms-portfolio', github: 'refinery/refinerycms-portfolio', branch: '
 # gem 'refinerycms-base', '~> 1.0.11'
 # gem 'refinerycms-pages'
 gem "refinerycms-inquiries", git: "https://github.com/refinery/refinerycms-inquiries", branch: "master"
-# gem 'refinerycms-search', ['~> 3.0', '>= 3.0.0']
 gem 'refinerycms-blog', git: 'https://github.com/refinery/refinerycms-blog', branch: 'master'
-# gem 'refinerycms-page-images'
+# gem 'refinerycms-page-images', github: 'refinery/refinerycms-page-images', branch: 'master'
 gem 'refinerycms-search', github: 'refinery/refinerycms-search', branch: 'master'
 
 gem 'refinerycms-animals', path: 'vendor/extensions'
