@@ -8,18 +8,12 @@
   <% end %>
 <% end %>
 
-<div class="jumbotron">
-  <section id="body_content">
-    <section id="body">
-      <div id="animals">
+<div class="container" id="animals">
           <% @animals.each do |animal| %>
               <div class="animal">
                   <div class="img-responsive" alt="Responsive image" ><%= link_to (image_fu animal.photo), refinery.animals_animal_path(animal) %></div>
                   <div class="animal_name"><%= link_to animal.name, refinery.animals_animal_path(animal) %></div>
               </div>
           <% end %>
-      </div>
-    </section>
-  </section>
   <%= render '/refinery/content_page' %>
 </div>
