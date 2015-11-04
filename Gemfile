@@ -37,6 +37,7 @@ gem 'autoprefixer-rails'
 group :development, :test do
   gem 'sqlite3'
   gem 'byebug'
+  gem 'shoulda'
 end
 
 
@@ -95,3 +96,5 @@ gem 'refinerycms-search', github: 'refinery/refinerycms-search', branch: 'master
 gem 'refinerycms-animals', path: 'vendor/extensions'
 gem 'refinerycms-events', path: 'vendor/extensions'
 gem 'refinerycms-staffs', path: 'vendor/extensions'
+
+gem 'refinerycms-forums', path: 'vendor/extensions'

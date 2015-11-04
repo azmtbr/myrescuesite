@@ -1,0 +1,20 @@
+<ul>
+  <% if ::Refinery::Forums::Admin::ForumsController.searchable? %>
+    <li>
+      <%= render '/refinery/admin/search', :url => refinery.forums_admin_forums_path %>
+    </li>
+  <% end %>
+  <li>
+    <%= action_label :add, refinery.new_forums_admin_forum_path, t('.create_new') %>
+  </li>
+<% if !searching? && ::Refinery::Forums::Admin::ForumsController.sortable? && ::Refinery::Forums::Forum.many? %>
+  <li>
+    <%= action_label :reorder,
+                     refinery.forums_admin_forums_path,
+                     t('.reorder', what:  "Forums"), id: 'reorder_action'%>
+    <%= action_label :reorder_done,
+                     refinery.forums_admin_forums_path,
+                      t('.reorder_done', what: "Forums"), id: 'reorder_action_done', class: 'hidden'%>
+  </li>
+<% end %>
+</ul>
