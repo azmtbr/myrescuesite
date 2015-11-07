@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20151104175500) do
+ActiveRecord::Schema.define(version: 20151107200310) do
 
   create_table "animals", force: :cascade do |t|
     t.datetime "created_at", null: false
@@ -379,9 +379,6 @@ ActiveRecord::Schema.define(version: 20151104175500) do
   end
 
   add_index "refinery_settings", ["name"], name: "index_refinery_settings_on_name"
-
-# Could not dump table "refinery_staffs" because of following NoMethodError
-#   undefined method `[]' for nil:NilClass
 
   create_table "seo_meta", force: :cascade do |t|
     t.integer  "seo_meta_id"

@@ -1,5 +1,4 @@
-class CreateStaffsStaffs < ActiveRecord::Migration
-
+class RefineryStaffs < ActiveRecord::Migration
   def up
     create_table :refinery_staffs do |t|
       t.string :name
@@ -24,5 +23,4 @@ class CreateStaffsStaffs < ActiveRecord::Migration
     drop_table :refinery_staffs
 
   end
-
 end

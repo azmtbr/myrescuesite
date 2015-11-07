@@ -6,7 +6,7 @@ Refinery::Portfolio.configure do |config|
   # config.cover_image_thumb_size = "300x200"
 
   # Display image title and description?
-  # config.display_item_text = true
+   config.display_item_text = false
 
   # Display gallery description?
   # config.display_gallery_text = true
