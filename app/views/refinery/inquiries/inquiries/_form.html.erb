@@ -1,35 +1,48 @@
-<%= form_for [refinery, :inquiries, inquiry] do |f| %>
-  <%= render :partial => "/refinery/admin/error_messages",
-             :locals => {
-               :object => inquiry,
-               :include_object_name => true
-             } %>
-  <div class="form-group">
-    <%= f.label :name, :class => 'placeholder-fallback required' %>
-    <%= f.text_field :name, :class => 'text', :required => 'required',
-      :placeholder => (t('name', :scope => 'activerecord.attributes.refinery/inquiries/inquiry') if Refinery::Inquiries.show_placeholders) %>
-  </div>
-  <div class="form-group">
-    <%= f.label :email, :class => 'placeholder-fallback required' %>
-    <%= f.email_field :email, :class => 'text email', :required => 'required',
-      :placeholder => (t('email', :scope => 'activerecord.attributes.refinery/inquiries/inquiry') if Refinery::Inquiries.show_placeholders) %>
-  </div>
 
-  <% if Refinery::Inquiries.show_phone_number_field %>
+ <div class="row">
+   <div class="col-md-4">
+     <p>Drop us a line</p>
+     <ul>
+       <li>Let us know which animal(s) you would like to meet.</li>
+       <li>If you have a requested meeting time, please tell us.</li>
+       <li>If you would just like info, all you have to do is ask.</li>
+     </ul>
+   </div>
+  <div class="col-md-8">
+    <%= form_for [refinery, :inquiries, inquiry] do |f| %>
+      <%= render :partial => "/refinery/admin/error_messages",
+                 :locals => {
+                   :object => inquiry,
+                   :include_object_name => true
+                 } %>
     <div class="form-group">
-      <%= f.label :phone, :class => 'placeholder-fallback' %>
-      <%= f.text_field :phone, :class => 'text phone',
-        :placeholder => (t('phone', :scope => 'activerecord.attributes.refinery/inquiries/inquiry') if Refinery::Inquiries.show_placeholders) %>
+      <%= f.label :name, :class => 'placeholder-fallback required' %>
+      <%= f.text_field :name, :class => 'form-control', :required => 'required',
+        :placeholder => (t('name', :scope => 'activerecord.attributes.refinery/inquiries/inquiry') if Refinery::Inquiries.show_placeholders) %>
+    </div>
+    <div class="form-group">
+      <%= f.label :email, :class => 'placeholder-fallback required' %>
+      <%= f.email_field :email, :class => 'form-control', :required => 'required',
+        :placeholder => (t('email', :scope => 'activerecord.attributes.refinery/inquiries/inquiry') if Refinery::Inquiries.show_placeholders) %>
+    </div>
+
+    <% if Refinery::Inquiries.show_phone_number_field %>
+      <div class="form-group">
+        <%= f.label :phone, :class => 'placeholder-fallback' %>
+        <%= f.text_field :phone, :class => 'form-control', :required => 'required',
+          :placeholder => (t('phone', :scope => 'activerecord.attributes.refinery/inquiries/inquiry') if Refinery::Inquiries.show_placeholders) %>
+      </div>
+    <% end %>
+
+    <div class='form-group'>
+      <%= f.label :message, :class => 'placeholder-fallback required' %>
+      <%= f.text_area :message, class: 'form-control', :rows => 8, :required => 'required',
+        :placeholder => 'Please tell us which animal(s) you would like to meet' if Refinery::Inquiries.show_placeholders %>
+    </div>
+    <div class="actions">
+      <%= f.submit "Send", class: 'btn btn-success' %>
+      <%= link_to t('.privacy_policy'), "/pages/privacy-policy", :id => "privacy_link" if Refinery::Inquiries.show_contact_privacy_link %>
     </div>
   <% end %>
-
-  <div class='field message_field'>
-    <%= f.label :message, :class => 'placeholder-fallback required' %>
-    <%= f.text_area :message, :rows => 8, :required => 'required',
-      :placeholder => 'Please tell us which animal(s) you would like to meet' if Refinery::Inquiries.show_placeholders %>
-  </div>
-  <div class="actions">
-    <%= f.submit t('.send') %>
-    <%= link_to t('.privacy_policy'), "/pages/privacy-policy", :id => "privacy_link" if Refinery::Inquiries.show_contact_privacy_link %>
-  </div>
-<% end %>
+ </div>
+</div>

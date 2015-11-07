@@ -1,33 +1,4 @@
-<% content_for :body_content_title do %>
-  <%= @forum.title %>
-<% end %>
+<h1><%= @post.title %></h1>
+<p><%= @post.body %></p>
 
-<% content_for :body do %>
-  <section>
-    <h1>Title</h1>
-    <p>
-      <%=raw @forum.title %>
-    </p>
-  </section>
-  <section>
-    <h1>Description</h1>
-    <p>
-      <%=raw @forum.description %>
-    </p>
-  </section>
-<% end %>
-
-<% content_for :side_body do %>
-  <aside>
-    <h2><%= t('.other') %></h2>
-    <ul id="forums">
-      <% @forums.each do |forum| %>
-        <li>
-          <%= link_to forum.title, refinery.forums_forum_path(forum) %>
-        </li>
-      <% end %>
-    </ul>
-  </aside>
-<% end %>
-
-<%= render '/refinery/content_page' %>
+<%= link_to "Back to all posts", refinery.forums_forums_path, class: 'btn btn-success' %>

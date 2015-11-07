@@ -1,11 +1,25 @@
 <% content_for :body do %>
-  <ul id="forums">
-    <% @forums.each do |forum| %>
+<h1>Community Board</h1>
+
+ <div class="row">
+   <div class="col-md-4">
+     <p>Guidelines:</p>
+     <ul>
+       <li>Must be animal related.</li>
+       <li>Tips and tricks are always welcome.</li>
+       <li>This community board is not for ads or solicitaions.</li>
+     </ul>
+   </div>
+   <div class="col-md-8">
+  <ul id="posts">
+    <% @posts.each do |post| %>
       <li>
-        <%= link_to forum.title, refinery.forums_forum_path(forum) %>
+        <%= link_to post.title, refinery.forums_forum_path(post)  %>
       </li>
     <% end %>
   </ul>
+</div>
 <% end %>
+</div>
 
 <%= render '/refinery/content_page' %>
