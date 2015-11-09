@@ -1,8 +1,10 @@
-class RefineryStaffs < ActiveRecord::Migration
+class CreateStaffsStaffs < ActiveRecord::Migration
+
   def up
     create_table :refinery_staffs do |t|
       t.string :name
       t.string :title
+      t.integer :photo_id
       t.text :bio
       t.integer :position
 
@@ -23,4 +25,5 @@ class RefineryStaffs < ActiveRecord::Migration
     drop_table :refinery_staffs
 
   end
+
 end

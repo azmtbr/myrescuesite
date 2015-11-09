@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20151107200310) do
+ActiveRecord::Schema.define(version: 20151109031345) do
 
   create_table "animals", force: :cascade do |t|
     t.datetime "created_at", null: false
@@ -379,6 +379,16 @@ ActiveRecord::Schema.define(version: 20151107200310) do
   end
 
   add_index "refinery_settings", ["name"], name: "index_refinery_settings_on_name"
+
+  create_table "refinery_staffs", force: :cascade do |t|
+    t.string   "name"
+    t.string   "title"
+    t.integer  "photo_id"
+    t.text     "bio"
+    t.integer  "position"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
 
   create_table "seo_meta", force: :cascade do |t|
     t.integer  "seo_meta_id"

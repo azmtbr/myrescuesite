@@ -98,3 +98,5 @@ gem 'refinerycms-events', path: 'vendor/extensions'
 
 
 gem 'refinerycms-forums', path: 'vendor/extensions'
+
+gem 'refinerycms-staffs', path: 'vendor/extensions'

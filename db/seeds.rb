@@ -15,6 +15,8 @@ Refinery::Animals::Engine.load_seed
 # Added by Refinery CMS Events extension
 Refinery::Events::Engine.load_seed
 
+# Added by Refinery CMS Staffs extension
+Refinery::Staffs::Engine.load_seed
 
 # Added by Refinery CMS Search engine
 Refinery::Search::Engine.load_seed

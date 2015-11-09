@@ -1,0 +1,30 @@
+it:
+  refinery:
+    plugins:
+      staffs:
+        title: Staffs
+    staffs:
+      admin:
+        staffs:
+          actions:
+            create_new: Aggiungi Nuovo Staff
+            reorder: Riordina Staffs
+            reorder_done: Termina il Riordino di Staffs
+          records:
+            title: Staffs
+            sorry_no_results: "Spiacenti! Nessun risultato trovato"
+            no_items_yet: Non ci sono ancora Staffs. Clicca "Aggiungi Nuovo Staff" per aggiungere il tuo primo staff.
+          staff:
+            view_live_html: Guarda live questo staff <br/><em>(apre una nuova finestra)</em>
+            edit: Modifica questo staff
+            delete: Rimuovi per sempre questo staff
+      staffs:
+        show:
+          other: Altri Staffs
+  activerecord:
+    attributes:
+      'refinery/staffs/staff':
+        name: Name
+        title: Title
+        photo: Photo
+        bio: Bio
