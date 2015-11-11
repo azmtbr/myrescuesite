@@ -11,10 +11,12 @@ module Refinery
       name_changed?
     end
 
+    original_verbose, $VERBOSE = $VERBOSE, nil
     FORM_VALUE_TYPES = [
       ['Multi-line', 'text_area'],
       ['Checkbox', 'check_box']
     ]
+    $VERBOSE = original_verbose
 
     validates :name, :presence => true
 
@@ -119,7 +121,9 @@ module Refinery
     # serialises a fields like booleans it doesn't retrieve it back out as a boolean
     # it just returns a string. This code maps the two boolean values
     # correctly so that a boolean is returned instead of a string.
+    original_verbose, $VERBOSE = $VERBOSE, nil
     REPLACEMENTS = {"true" => true, "false" => false}
+    $VERBOSE = original_verbose
 
     def replacements!(current_value)
       # This bit handles true and false so that true and false are actually returned

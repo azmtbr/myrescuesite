@@ -4,6 +4,7 @@ module Refinery
 
       before_action :find_all_forums
       before_action :find_page
+      before_action :find_all_posts
 
       def index
         # you can use meta fields from your model instead (e.g. browser_title)
@@ -27,7 +28,7 @@ module Refinery
 
         if @post.save
           flash[:notice] = "Post was saved."
-          redirect_to @post
+          redirect_to refinery.forums_forum_path(@post)
         else
           flash[:error] = "There was an error saving the post. Please try again."
           render :new
@@ -35,9 +36,40 @@ module Refinery
       end
 
       def edit
+        @post = Post.find(params[:id])
       end
 
+      def update
+         @post = Post.find(params[:id])
+         @post.title = params[:post][:title]
+         @post.body = params[:post][:body]
+
+         if @post.save
+           flash[:notice] = "Post was updated."
+           redirect_to refinery.forums_forum_path(@post)
+         else
+           flash[:error] = "There was an error saving the post. Please try again."
+           render :edit
+         end
+      end
+
+      def destroy
+        @post = Post.find(params[:id])
+
+         if @post.destroy
+           flash[:notice] = "\"#{@post.title}\" was deleted successfully."
+           redirect_to posts_path
+         else
+           flash[:error] = "There was an error deleting the post."
+           render :show
+         end
+       end
+
     protected
+
+      def find_all_posts
+        @posts = Post.order('position ASC')
+      end
 
       def find_all_forums
         @forums = Forum.order('position ASC')

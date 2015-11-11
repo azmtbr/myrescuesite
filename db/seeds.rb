@@ -33,7 +33,7 @@ Refinery::Blog::Engine.load_seed
 # Added by Refinery CMS Forums extension
 Refinery::Forums::Engine.load_seed
 
-include RandomData
+# include RandomData
 
  # # Create Posts
  # 50.times do

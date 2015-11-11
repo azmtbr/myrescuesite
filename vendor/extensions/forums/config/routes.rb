@@ -1,8 +1,10 @@
 Refinery::Core::Engine.routes.draw do
 
+  
+
   # Frontend routes
   namespace :forums do
-    resources :forums, :path => '', :only => [:index, :show]
+    resources :forums, :path => ''
   end
 
   # Admin routes
